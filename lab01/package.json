@@ -1,0 +1,15 @@
+{
+  "name": "lab01",
+  "version": "1.0.0",
+  "description": "Лабораторна робота №1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kokhan Tetiana",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "yargs": "^17.7.2"
+  }
+}

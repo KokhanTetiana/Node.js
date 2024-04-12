@@ -1,0 +1,14 @@
+{
+  "firstName": "Tetiana",
+  "lastName": "Kokhan",
+  "languages": [
+    {
+      "title": "js",
+      "level": "pro"
+    },
+    {
+      "title": "html",
+      "level": "pro"
+    }
+  ]
+}

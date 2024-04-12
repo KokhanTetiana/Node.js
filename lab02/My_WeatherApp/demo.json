@@ -1,0 +1,44 @@
+{
+  "coord": {
+    "lon": 28.6767,
+    "lat": 50.2649
+  },
+  "weather": [
+    {
+      "id": 800,
+      "main": "Clear",
+      "description": "clear sky",
+      "icon": "01d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 286.12,
+    "feels_like": 284.78,
+    "temp_min": 286.12,
+    "temp_max": 286.12,
+    "pressure": 1029,
+    "humidity": 50,
+    "sea_level": 1029,
+    "grnd_level": 1003
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 5.14,
+    "deg": 323,
+    "gust": 7.42
+  },
+  "clouds": {
+    "all": 0
+  },
+  "dt": 1712904493,
+  "sys": {
+    "country": "UA",
+    "sunrise": 1712891845,
+    "sunset": 1712940849
+  },
+  "timezone": 10800,
+  "id": 686967,
+  "name": "Zhytomyr",
+  "cod": 200
+}
