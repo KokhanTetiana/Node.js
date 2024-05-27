@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Tasks</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid gray;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: lightgray;
+        }
+
+        /* Стили для скрытия формы по умолчанию */
+        .new-task-form {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h1>User Tasks</h1>
+<!-- Кнопка для открытия формы создания новой задачи -->
+<button id="showNewTaskForm">Створити нову задачу</button>
+<!-- Форма для создания новой задачи -->
+<form id="newTaskForm" class="new-task-form" action="/tasks/{{userId}}" method="POST">
+    <input type="hidden" id="userId" name="userId" value="{{userId}}">
+    <label for="title">Назва:</label><br>
+    <input type="text" id="title" name="title"><br>
+    <label for="description">Опис:</label><br>
+    <textarea id="description" name="description"></textarea><br>
+    <button type="submit">Зберегти</button>
+</form>
+<table>
+    <thead>
+    <tr>
+        <th>Назва</th>
+        <th>Опис</th>
+        <th>Дії</th> <!-- Добавляем заголовок для столбца с кнопками действий -->
+    </tr>
+    </thead>
+    <tbody>
+    {{#each tasks}}
+        <tr>
+            <td>{{title}}</td>
+            <td>{{description}}</td>
+            <td>
+                <form action="/tasks/{{_id}}/delete" method="POST">
+                    <button type="submit">Видалити</button> <!-- Кнопка для удаления задачи -->
+                </form>
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+
+
+<script>
+    // JavaScript для отображения и скрытия формы создания новой задачи
+    document.getElementById('showNewTaskForm').addEventListener('click', function() {
+        let form = document.getElementById('newTaskForm');
+        if (form.style.display === 'none') {
+            form.style.display = 'block';
+        } else {
+            form.style.display = 'none';
+        }
+    });
+</script>
+</body>
+</html>
